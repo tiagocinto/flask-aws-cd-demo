@@ -1,17 +1,17 @@
 from flask import Flask
 from flask import jsonify
 
-app = Flask(__name__)
+application = Flask(__name__)
 
 
-@app.route("/")
+@application.route("/")
 def hello():
     """Return a friendly HTTP greeting."""
     print("I am inside hello world")
     return "Hello World!"
 
 
-@app.route("/echo/<name>")
+@application.route("/echo/<name>")
 def echo(name):
     print(f"This was placed in the url: {name}")
     val = {"value": name}
@@ -19,4 +19,4 @@ def echo(name):
 
 
 if __name__ == "__main__":
-    app.run(host="127.0.0.1", port=8080, debug=True)
+    application.run(host="127.0.0.1", port=8080, debug=True)

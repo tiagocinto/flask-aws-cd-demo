@@ -11,7 +11,7 @@ install-local:
 		pip install -r requirements-local.txt
 
 test:
-	python -m pytest -vv --cov=main main_test.py
+	python -m pytest -vv --cov=application application_test.py
 
 format:
 	black *.py
@@ -21,5 +21,5 @@ lint:
 	
 deploy:
 	echo "Deploying app"
-	eb deploy app-env
+	eb deploy flask-env
 
