@@ -21,5 +21,5 @@ lint:
 	
 deploy:
 	echo "Deploying app"
-	eb deploy
+	eb deploy Flaskapplication-env
 
